@@ -3,7 +3,6 @@ from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
-
 import time
 
 options = webdriver.ChromeOptions()
@@ -16,14 +15,13 @@ time.sleep(5)
 
 pop_up = driver.find_element(By.CSS_SELECTOR, "#langSelect-EN").click()
 time.sleep(5)
-"""
-clicker = driver.find_element(By.ID, "bigCookie")
-clicker_count = driver.find_element(By.ID, "cookies")
-"""
-cookie_clicker = driver.find_element(By.ID, "big Cookie")
+
 actions = ActionChains(driver)
+cookie_clicker = driver.find_element(By.ID, "bigCookie")
+#clicker_count = driver.find_element(By.ID, "cookies")
 actions.double_click(cookie_clicker).perform()
+items = driver.find_element (By.ID ("productPrice" + str(1))
+for i in range(1, -1, -1))
 
-#ActionChains(driver).double_click(cookie_clicker).perform()
-
-#consent = ActionChains(driver)
+for i in range(5000):
+    actions.perform()
