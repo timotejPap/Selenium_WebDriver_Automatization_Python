@@ -18,10 +18,4 @@ time.sleep(5)
 
 actions = ActionChains(driver)
 cookie_clicker = driver.find_element(By.ID, "bigCookie")
-#clicker_count = driver.find_element(By.ID, "cookies")
 actions.double_click(cookie_clicker).perform()
-items = driver.find_element (By.ID ("productPrice" + str(1))
-for i in range(1, -1, -1))
-
-for i in range(5000):
-    actions.perform()
