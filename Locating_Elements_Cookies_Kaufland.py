@@ -4,11 +4,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time
 
+# Toto ponechá okno otvorené
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
 
-
+# Kódenie automatizácie
 driver.get("https://www.kaufland.sk/")
 driver.maximize_window()
 time.sleep(3)
