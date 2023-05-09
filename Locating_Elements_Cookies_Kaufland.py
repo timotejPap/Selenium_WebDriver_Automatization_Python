@@ -26,11 +26,12 @@ print("Nazov stranky je: ", driver.title)
 
 linky = driver.find_elements("xpath", "//a[@href]")
 for link in linky:
-    if "byvanie" in link.get_attribute("href"):
+    if "byvanie" in link.get_attribute("innerHTML"):
         driver.get(link.get_attribute("href"))
         break
-
+"""
 postele = driver.find_elements(By.XPATH, "//div[contains(@class, 'rd-category-tiles')][.//a@href")
 
 for nabytok in postele:
     print(nabytok.get_attribute("innerHTML"))
+"""
