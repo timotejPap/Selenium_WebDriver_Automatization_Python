@@ -29,6 +29,7 @@ for link in linky:
     if "byvanie" in link.get_attribute("innerHTML"):
         driver.get(link.get_attribute("href"))
         break
+print(linky)
 """
 postele = driver.find_elements(By.XPATH, "//div[contains(@class, 'rd-category-tiles')][.//a@href")
 
