@@ -8,16 +8,16 @@ options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
 
+driver.maximize_window()
+
 driver.implicitly_wait(10)
 
 driver.get("https://selectorshub.com/xpath-practice-page/")
 email_input = driver.find_element(By.ID, "userId")
-
-print(email_input.is_displayed())
-print(email_input.is_displayed())
+print("Displayed: ", email_input.is_displayed())
 
 password_input = driver.find_element(By.ID, "pass")
-print(password_input.is_displayed())
+print("Displayed:", password_input.is_displayed())
 
 company_input = driver.find_element(By. NAME, "company")
 email_input.send_keys("jozko@mrkvicka.sk")
@@ -30,5 +30,5 @@ driver.get("https://www.techlistic.com/p/selenium-practice-form.html")
 cookie = driver.find_element(By.ID, "ez-accept-all").click()
 time.sleep(5)
 male = driver.find_element(By.ID, "sex-0").click()
-radio_button = driver.find_element(By.ID, "sex-0")
-print(radio_button.is_selected())
+radio_button = driver.find_element(By.ID, "sex-0").is_selected()
+print("Selected: ", radio_button)

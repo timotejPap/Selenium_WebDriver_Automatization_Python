@@ -2,7 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
-import time
+from selenium.webdriver.support.ui import Select
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -10,14 +10,7 @@ driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager()
 
 driver.maximize_window()
 
-driver.get("https://www.techwithtim.net/")
-print("Toto je nazov stranky:", driver.title)
+driver.get("https://www.demoblaze.com/")
 
-link = driver.find_element(By.LINK_TEXT, "Python Programming").click()
-time.sleep(5)
-
-link = driver.find_element(By.LINK_TEXT, "Beginner Python Tutorials").click()
-
-link = driver.find_element(By.ID, "sow-button-19310003").click()
-
-driver.back()
+price = driver.find_elements(By.CSS_SELECTOR, "body > div:nth-child(6) > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) > h5:nth-child(2)")
+print(price)

@@ -1,4 +1,3 @@
-import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
@@ -7,6 +6,8 @@ from selenium.webdriver.common.by import By
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
 driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
+
+driver.maximize_window()
 
 driver.get("https://letcode.in/radio")
 
@@ -45,3 +46,6 @@ print("Foo: ", foo, bar)
 
 enabled = driver.find_element(By.ID, "maybe").is_enabled()
 print("Disabled: ", enabled)
+
+checkbox = driver.find_element(By. XPATH, "//label[normalize-space()='Remember me']//input[@type='checkbox']").is_selected()
+print("Checkbox is: ", checkbox)
