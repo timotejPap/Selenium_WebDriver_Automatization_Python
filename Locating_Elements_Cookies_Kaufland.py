@@ -30,4 +30,5 @@ submit = driver.find_element(By.XPATH, "//button[@type='button']//span[@class='s
 ActionChains(driver).send_keys_to_element(search, "slanina").click(submit).perform()
 time.sleep(4)
 slane = driver.find_element(By.XPATH, "//div[contains(text(),'Slané pečivo')]").click()
-#link = driver.find_element(By.LINK_TEXT, "Kariéra v predajniach Kaufland").click()
+odkaz = driver.find_element(By.CLASS_NAME, "rd-footer_navigation-link-list-item").click()
+print(driver.title)
