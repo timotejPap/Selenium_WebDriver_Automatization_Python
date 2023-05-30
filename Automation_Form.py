@@ -15,14 +15,29 @@ driver.get("https://www.techlistic.com/p/selenium-practice-form.html")
 cookie = driver.find_element(By.ID, "ez-accept-necessary").click()
 
 first_name = driver.find_element(By.NAME, "firstname").send_keys("Peter")
+
 last_name = driver.find_element(By.NAME, "lastname").send_keys("Hric")
+
 time.sleep(4)
-#sex = driver.find_element(By.NAME, "sex").click()
-#years_exp = driver.find_element(By.ID, "exp-0").click()
+sex = driver.find_element(By.NAME, "sex").click()
+
+years_exp = driver.find_element(By.ID, "exp-0").click()
+
 date = driver.find_element(By.ID, "datepicker").send_keys("20.5.2023")
+
 profession = driver.find_element(By.ID, "profession-0").click()
 profession = driver.find_element(By.ID, "profession-1").click()
-profession = driver.find_element(By.ID, "tool-2").click()
+
+tool = driver.find_element(By.ID, "tool-2").click()
+
 continent_dropdown = driver.find_element(By.NAME, "continents")
 dd = Select(continent_dropdown)
 dd.select_by_visible_text("Europe")
+
+commands = driver.find_element(By.NAME, "selenium_commands")
+command = Select(commands)
+command.select_by_visible_text("WebElement Commands")
+
+file = driver.find_element(By.ID, "photo").send_keys("D:\Timčo súbory\Pictures\Moje fotky\Fotky z detstva\Drevo.jpg")
+
+button = driver.find_element(By.ID, "submit").click()

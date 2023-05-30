@@ -25,7 +25,6 @@ password_input.send_keys("123456789")
 company_input.send_keys("Rodinkarstvo")
 submit = driver.find_element(By. XPATH, "/html/body/div[1]/main/div/div[1]/section[2]/div/div[1]/div/div[1]/div/form/div/input[3]").click()
 
-
 driver.get("https://www.techlistic.com/p/selenium-practice-form.html")
 cookie = driver.find_element(By.ID, "ez-accept-all").click()
 time.sleep(5)
