@@ -41,3 +41,6 @@ command.select_by_visible_text("WebElement Commands")
 file = driver.find_element(By.ID, "photo").send_keys("D:\Timčo súbory\Pictures\Moje fotky\Fotky z detstva\Drevo.jpg")
 
 #button = driver.find_element(By.ID, "submit").click()
+
+time.sleep(3)
+driver.close()
