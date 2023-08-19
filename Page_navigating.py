@@ -23,3 +23,6 @@ print(driver.title)
 driver.forward()
 time.sleep(3)
 print(driver.title)
+time.sleep(3)
+
+driver.close()

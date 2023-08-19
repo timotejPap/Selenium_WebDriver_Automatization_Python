@@ -1,9 +1,9 @@
-import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
+import time
 
 options = webdriver.ChromeOptions()
 options.add_experimental_option("detach", True)
@@ -40,4 +40,4 @@ command.select_by_visible_text("WebElement Commands")
 
 file = driver.find_element(By.ID, "photo").send_keys("D:\Timčo súbory\Pictures\Moje fotky\Fotky z detstva\Drevo.jpg")
 
-button = driver.find_element(By.ID, "submit").click()
+#button = driver.find_element(By.ID, "submit").click()

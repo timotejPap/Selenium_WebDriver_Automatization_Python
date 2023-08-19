@@ -15,14 +15,12 @@ driver.maximize_window()
 # Kódenie automatizácie
 driver.get("https://www.kaufland.sk/")
 driver.maximize_window()
-time.sleep(3)
+time.sleep(5)
 
-cookie = driver.find_element(By.XPATH, "//button[@id='402r8Hptk8']").click()
-time.sleep(3)
-
-cookie = driver.find_element(By.XPATH, "//button[contains(text(),'Povoliť vybrané')]").click()
+cookie = driver.find_element(By.ID, "onetrust-reject-all-handler").click()
 time.sleep(3)
 print("Nazov stranky je: ", driver.title)
+
 
 search = driver.find_element(By.NAME, "search_value")
 time.sleep(5)

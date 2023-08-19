@@ -10,14 +10,17 @@ driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager()
 
 driver.maximize_window()
 
+
 driver.get("https://www.techwithtim.net/")
 print("Toto je nazov stranky:", driver.title)
 
-link = driver.find_element(By.LINK_TEXT, "Python Programming").click()
+link = driver.find_element(By.LINK_TEXT, "Courses").click()
 time.sleep(5)
 
-link = driver.find_element(By.LINK_TEXT, "Beginner Python Tutorials").click()
+link = driver.find_element(By.LINK_TEXT, "Tutorials").click()
 
-link = driver.find_element(By.ID, "sow-button-19310003").click()
+link = driver.find_element(By.LINK_TEXT, "Java").click()
 
 driver.back()
+driver.back()
+print(driver.title)
