@@ -19,7 +19,7 @@ time.sleep(5)
 
 cookie = driver.find_element(By.ID, "onetrust-reject-all-handler").click()
 time.sleep(3)
-print("Nazov stranky je: ", driver.title)
+print("Nazov webu je: ", driver.title)
 
 
 search = driver.find_element(By.NAME, "search_value")
